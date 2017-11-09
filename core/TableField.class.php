@@ -60,7 +60,7 @@ class TableField extends Connection
     public function setName($name)
     {
         $tableName = $this->getTable();
-        $fieldType = $this->getNull() === 'NO' ? $this->getType() . 'NOT NULL' : $this->getType();
+        $fieldType = $this->getNull() === 'NO' ? $this->getType() . ' NOT NULL' : $this->getType();
         $oldFieldName = $this->getName();
 
         $sql = "ALTER TABLE `$tableName` CHANGE `$oldFieldName` `$name` $fieldType";
